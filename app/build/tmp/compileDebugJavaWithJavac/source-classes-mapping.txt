@@ -1,0 +1,2 @@
+com/example/cartel2022/BuildConfig.java
+ com.example.cartel2022.BuildConfig
