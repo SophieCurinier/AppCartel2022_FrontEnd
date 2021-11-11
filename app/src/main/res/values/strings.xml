@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Cartel2022</string>
+    <string name="school">Ecoles participantes</string>
+    <string name="planning">Planning</string>
+    <string name="social_network">Réseaux Sociaux</string>
+    <string name="ranking">Classement</string>
+    <string name="map">Plan</string>
 </resources>
