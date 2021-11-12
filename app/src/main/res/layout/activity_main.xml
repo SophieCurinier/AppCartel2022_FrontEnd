@@ -27,14 +27,6 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.05" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.95" />
-
-
 
     <ImageView
         android:id="@+id/homeLogoView"
@@ -49,45 +41,32 @@
         tools:ignore="MissingConstraints,Suspicious0dp" />
 
     <Button
-        android:id="@+id/buttonSchool"
-        android:layout_width="0dp"
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/school"
-        app:layout_constraintBottom_toTopOf="@+id/buttonPlanning"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/homeLogoView" />
 
     <Button
-        android:id="@+id/buttonPlanning"
-        android:layout_width="0dp"
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/planning"
-        app:layout_constraintBottom_toTopOf="@+id/buttonRanking"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSchool" />
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <Button
-        android:id="@+id/buttonRanking"
-        android:layout_width="0dp"
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/ranking"
-        app:layout_constraintBottom_toTopOf="@+id/buttonSport"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/buttonPlanning" />
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
-    <Button
-        android:id="@+id/buttonSport"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:onClick="switchSport"
-        android:text="@string/sports"
-        app:layout_constraintBottom_toBottomOf="@id/guideline4"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/buttonRanking" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
