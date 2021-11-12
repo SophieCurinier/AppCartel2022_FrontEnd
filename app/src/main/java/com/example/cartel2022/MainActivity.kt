@@ -14,17 +14,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //* var buttonBookmarks = findViewById<Button>(R.id.buttonSport) as Button
-        //buttonBookmarks.setOnClickListener{
-        //    Toast.makeText(this, "Works", Toast.LENGTH_LONG).show()
-        //}
         }
     /** Called when the user taps the Sport button */
     fun switchSport(view: View) {
         val editText = findViewById<Button>(R.id.buttonSport)
         val message = editText.text.toString()
         Toast.makeText(this, "message", Toast.LENGTH_LONG).show()
-        val intent = Intent(this, MatchActivity::class.java).apply {
+        val intent = Intent(this, SportActivity::class.java).apply {
             putExtra(EXTRA_MESSAGE, message)
         }
         startActivity(intent)

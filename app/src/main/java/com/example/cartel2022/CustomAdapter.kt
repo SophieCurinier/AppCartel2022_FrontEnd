@@ -15,7 +15,7 @@ internal class CustomAdapter(private var itemsList: List<String>) :
     @NonNull
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item, parent, false)
+            .inflate(R.layout.match_item, parent, false)
         return MyViewHolder(itemView)
     }
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
