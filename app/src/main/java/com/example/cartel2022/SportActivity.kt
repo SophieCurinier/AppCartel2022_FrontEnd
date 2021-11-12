@@ -18,9 +18,11 @@ class SportActivity : AppCompatActivity(), ExampleAdapter.OnItemClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sport)
 
-        recycler_view.adapter = adapter
-        recycler_view.layoutManager = LinearLayoutManager(this)
-        recycler_view.setHasFixedSize(true)
+        sport_recycler_view.adapter = adapter
+        sport_recycler_view.layoutManager = LinearLayoutManager(this)
+        sport_recycler_view.setHasFixedSize(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        title = intent.getStringExtra(EXTRA_MESSAGE)
     }
 
     fun insertItem(view: View) {
