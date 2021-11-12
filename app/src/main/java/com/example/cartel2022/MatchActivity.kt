@@ -12,7 +12,8 @@ class MatchActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_match)
-        title = "Football"
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        // title = "Football"
 
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
         customAdapter = CustomAdapter(itemsList)
@@ -20,6 +21,11 @@ class MatchActivity : AppCompatActivity() {
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = customAdapter
         prepareItems()
+
+        // Get the Intent that started this activity and extract the string
+        val message = intent.getStringExtra(EXTRA_MESSAGE)
+
+        title = message
     }
     private fun prepareItems() {
         itemsList.add("Match 1")
