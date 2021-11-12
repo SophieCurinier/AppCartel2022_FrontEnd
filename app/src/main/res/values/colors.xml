@@ -4,5 +4,6 @@
     <color name="kaki_500">#426442</color>
     <color name="kaki_700">#3a5439</color>
     <color name="black">#FF000000</color>
+    <color name="grey">#3A393E</color>
     <color name="white">#FFFFFFFF</color>
 </resources>
