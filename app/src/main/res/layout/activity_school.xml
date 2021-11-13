@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".SchoolActivity">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/school_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:padding="4dp"
+        tools:listitem="@layout/sport_item" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
