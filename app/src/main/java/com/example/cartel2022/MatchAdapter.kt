@@ -30,22 +30,12 @@ class MatchAdapter(
 
     override fun getItemCount() = matchlist.size
 
-    inner class MatchViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
-        View.OnClickListener {
+    inner class MatchViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+        //All view of the list item
         val textViewMatch: TextView = itemView.match_itemTextView
         val textViewTeam1: TextView = itemView.match_itemTextViewTeam1
         val textViewTeam2: TextView = itemView.match_itemTextViewTeam2
         val textViewScore: TextView = itemView.match_itemTextViewScore
-
-        init {
-            itemView.setOnClickListener(this)
-        }
-
-        override fun onClick(v: View?) {
-            val position = adapterPosition
-            if (position != RecyclerView.NO_POSITION) {
-            }
-        }
     }
 
 }
