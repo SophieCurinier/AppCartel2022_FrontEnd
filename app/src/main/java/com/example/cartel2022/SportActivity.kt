@@ -11,7 +11,7 @@ import kotlin.random.Random
 
 class SportActivity : AppCompatActivity(), SportAdapter.OnItemClickListener {
     //Change with length of Sport Table
-    private val sportList = generateDummyList(15)
+    private val sportList = generateDummyList(20)
     private val adapter = SportAdapter(sportList, this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,25 +25,13 @@ class SportActivity : AppCompatActivity(), SportAdapter.OnItemClickListener {
         title = intent.getStringExtra(EXTRA_MESSAGE)
     }
 
-    fun insertItem(view: View) {
-        val index = Random.nextInt(8)
-
-        val newItem = SportItem(
-            "New item at position $index"
-        )
-
-        sportList.add(index, newItem)
-        adapter.notifyItemInserted(index)
-    }
 
         //When user clicks on a sport button
-        override fun onItemClick(position: Int) {
-            Toast.makeText(this, "Item $position clicked", Toast.LENGTH_SHORT).show()
+    override fun onItemClick(position: Int) {
             val clickedItem = sportList[position]
-            clickedItem.text1 = "Clicked"
             adapter.notifyItemChanged(position)
             val intent = Intent(this, MatchActivity::class.java).apply {
-                putExtra(EXTRA_MESSAGE, clickedItem.text1)
+                putExtra(EXTRA_MESSAGE, clickedItem.sportName)
             }
             startActivity(intent)
         }
@@ -52,7 +40,7 @@ class SportActivity : AppCompatActivity(), SportAdapter.OnItemClickListener {
     private fun generateDummyList(size: Int): ArrayList<SportItem> {
         val list = ArrayList<SportItem>()
         for (i in 0 until size) {
-            val item = SportItem("Item $i")
+            val item = SportItem("Sport $i")
             list += item
         }
         return list

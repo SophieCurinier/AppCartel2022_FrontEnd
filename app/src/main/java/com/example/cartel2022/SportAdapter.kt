@@ -23,7 +23,7 @@ class SportAdapter(
     override fun onBindViewHolder(holder: SportViewHolder, position: Int) {
         val currentItem = sportList[position]
 
-        holder.textView1.text = currentItem.text1
+        holder.textView1.text = currentItem.sportName
     }
 
     override fun getItemCount() = sportList.size
