@@ -9,10 +9,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_sport.*
 import kotlin.random.Random
 
-class SportActivity : AppCompatActivity(), ExampleAdapter.OnItemClickListener {
+class SportActivity : AppCompatActivity(), SportAdapter.OnItemClickListener {
     //Change with length of Sport Table
-    private val exampleList = generateDummyList(15)
-    private val adapter = ExampleAdapter(exampleList, this)
+    private val sportList = generateDummyList(15)
+    private val adapter = SportAdapter(sportList, this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,14 +32,14 @@ class SportActivity : AppCompatActivity(), ExampleAdapter.OnItemClickListener {
             "New item at position $index"
         )
 
-        exampleList.add(index, newItem)
+        sportList.add(index, newItem)
         adapter.notifyItemInserted(index)
     }
 
         //When user clicks on a sport button
         override fun onItemClick(position: Int) {
             Toast.makeText(this, "Item $position clicked", Toast.LENGTH_SHORT).show()
-            val clickedItem = exampleList[position]
+            val clickedItem = sportList[position]
             clickedItem.text1 = "Clicked"
             adapter.notifyItemChanged(position)
             val intent = Intent(this, MatchActivity::class.java).apply {

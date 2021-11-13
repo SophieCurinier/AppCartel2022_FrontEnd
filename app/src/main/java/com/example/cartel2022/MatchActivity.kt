@@ -3,44 +3,33 @@ package com.example.cartel2022
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import android.view.View
+import kotlin.random.Random
+import kotlinx.android.synthetic.main.activity_match.*
 
 class MatchActivity : AppCompatActivity() {
-    private val itemsList = ArrayList<String>()
-    private lateinit var customAdapter: CustomAdapter
+    private val matchList = generateDummyList(500)
+    private val adapter = MatchAdapter(matchList)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_match)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        // title = "Football"
 
-        val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
-        customAdapter = CustomAdapter(itemsList)
-        val layoutManager = LinearLayoutManager(applicationContext)
-        recyclerView.layoutManager = layoutManager
-        recyclerView.adapter = customAdapter
-        prepareItems()
-
-        // Get the Intent that started this activity and extract the string
-        val message = intent.getStringExtra(EXTRA_MESSAGE)
-
-        title = message
+        match_recyclerview.adapter = adapter
+        match_recyclerview.layoutManager = LinearLayoutManager(this)
+        match_recyclerview.setHasFixedSize(true)
     }
-    private fun prepareItems() {
-        itemsList.add("Match 1")
-        itemsList.add("Match 2")
-        itemsList.add("Rugby M")
-        itemsList.add("Rugby F")
-        itemsList.add("Handball M")
-        itemsList.add("Handball F")
-        itemsList.add("Volley M")
-        itemsList.add("Volley F")
-        itemsList.add("Natation")
-        itemsList.add("Boxe")
-        itemsList.add("VTT")
-        itemsList.add("DJ Contest")
-        itemsList.add("Pompom")
-        customAdapter.notifyDataSetChanged()
+
+
+    //Match List
+    private fun generateDummyList(size: Int): ArrayList<MatchItem> {
+
+        val list = ArrayList<MatchItem>()
+
+        for (i in 0 until size) {
+            val item = MatchItem("match $i", "Team $i", "Team 2","0-2")
+            list += item
+        }
+        return list
     }
 }
