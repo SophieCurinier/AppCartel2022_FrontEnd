@@ -34,4 +34,38 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.95" />
 
+
+    <RelativeLayout
+        android:id="@+id/poste"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="@color/kaki_500"
+        android:padding="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/guideline3">
+
+        <TextView
+            android:id="@+id/posteView"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="Président"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/circonstance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Si les Vices-Présidents sont injoignables"
+            android:textColor="@color/white"
+            app:layout_bellow="@+id/posteView"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
 </androidx.constraintlayout.widget.ConstraintLayout>
