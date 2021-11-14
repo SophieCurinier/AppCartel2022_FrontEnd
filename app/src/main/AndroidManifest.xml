@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Cartel2022">
         <activity
+            android:name=".BasicActivity"
+            android:exported="false"
+            android:label="@string/title_activity_basic"
+            android:theme="@style/Theme.Cartel2022.NoActionBar" />
+        <activity
             android:name=".SocialNetworkActivity"
             android:exported="false" />
         <activity

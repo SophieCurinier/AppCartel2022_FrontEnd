@@ -3,17 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/sophi/Documents/Majeure/CARTEL/AppCartel2022_FrontEnd/app/src/main/res/layout/activity_drawer.xml" value="0.184375" />
         <entry key="..\:/Users/sophi/Documents/Majeure/CARTEL/AppCartel2022_FrontEnd/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/sophi/Documents/Majeure/CARTEL/AppCartel2022_FrontEnd/app/src/main/res/layout/activity_main_drawer.xml" value="0.10144927536231885" />
         <entry key="..\:/Users/sophi/Documents/Majeure/CARTEL/AppCartel2022_FrontEnd/app/src/main/res/layout/activity_match.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/sophi/Documents/Majeure/CARTEL/AppCartel2022_FrontEnd/app/src/main/res/layout/activity_ranking.xml" value="0.2972222222222222" />
         <entry key="..\:/Users/sophi/Documents/Majeure/CARTEL/AppCartel2022_FrontEnd/app/src/main/res/layout/activity_school.xml" value="0.1" />
         <entry key="..\:/Users/sophi/Documents/Majeure/CARTEL/AppCartel2022_FrontEnd/app/src/main/res/layout/activity_social_network.xml" value="0.22" />
         <entry key="..\:/Users/sophi/Documents/Majeure/CARTEL/AppCartel2022_FrontEnd/app/src/main/res/layout/activity_socialnetwork.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/sophi/Documents/Majeure/CARTEL/AppCartel2022_FrontEnd/app/src/main/res/layout/activity_sport.xml" value="0.1259259259259259" />
+        <entry key="..\:/Users/sophi/Documents/Majeure/CARTEL/AppCartel2022_FrontEnd/app/src/main/res/layout/app_bar_drawer.xml" value="0.184375" />
+        <entry key="..\:/Users/sophi/Documents/Majeure/CARTEL/AppCartel2022_FrontEnd/app/src/main/res/layout/app_bar_main_drawer.xml" value="0.18385416666666668" />
+        <entry key="..\:/Users/sophi/Documents/Majeure/CARTEL/AppCartel2022_FrontEnd/app/src/main/res/layout/content_drawer.xml" value="0.1" />
+        <entry key="..\:/Users/sophi/Documents/Majeure/CARTEL/AppCartel2022_FrontEnd/app/src/main/res/layout/content_main_drawer.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/sophi/Documents/Majeure/CARTEL/AppCartel2022_FrontEnd/app/src/main/res/layout/example_item.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/sophi/Documents/Majeure/CARTEL/AppCartel2022_FrontEnd/app/src/main/res/layout/item.xml" value="0.3390928725701944" />
         <entry key="..\:/Users/sophi/Documents/Majeure/CARTEL/AppCartel2022_FrontEnd/app/src/main/res/layout/match_item.xml" value="0.31153846153846154" />
+        <entry key="..\:/Users/sophi/Documents/Majeure/CARTEL/AppCartel2022_FrontEnd/app/src/main/res/layout/nav_header_main_drawer.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/sophi/Documents/Majeure/CARTEL/AppCartel2022_FrontEnd/app/src/main/res/layout/sport_item.xml" value="0.184375" />
+        <entry key="..\:/Users/sophi/Documents/Majeure/CARTEL/AppCartel2022_FrontEnd/app/src/main/res/menu/activity_main_drawer_drawer.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/sophi/Documents/Majeure/CARTEL/AppCartel2022_FrontEnd/app/src/main/res/menu/drawer.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/sophi/Documents/Majeure/CARTEL/AppCartel2022_FrontEnd/app/src/main/res/menu/menu.xml" value="0.1" />
       </map>
     </option>
   </component>
