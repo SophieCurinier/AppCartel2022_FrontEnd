@@ -12,7 +12,7 @@ class SocialNetworkActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_social_network)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        title = "Réseaux Sociaux"
+        title = intent.getStringExtra(EXTRA_SPORT)
     }
 
     fun switchInstagram(view: View) {

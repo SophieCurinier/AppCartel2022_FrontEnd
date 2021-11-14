@@ -31,16 +31,20 @@ class MainActivity : AppCompatActivity() {
         val id = item.getItemId()
 
         if (id == R.id.action_social_network) {
-            startActivity(Intent(this, SocialNetworkActivity::class.java))
+            startActivity(Intent(this, SocialNetworkActivity::class.java).apply {
+                putExtra(EXTRA_SPORT, "Réseaux Sociaux")})
         }
         if (id == R.id.action_urgency_contact) {
-            startActivity(Intent(this, ContactsActivity::class.java))
+            startActivity(Intent(this, ContactsActivity::class.java).apply {
+                putExtra(EXTRA_SPORT, "Contact des responsables")})
         }
         if (id == R.id.action_map) {
-            startActivity(Intent(this, MapsActivity::class.java))
+            startActivity(Intent(this, MapsActivity::class.java).apply {
+                putExtra(EXTRA_SPORT, "Plan")})
         }
         if (id == R.id.action_setting){
-            startActivity(Intent(this, SocialNetworkActivity::class.java))
+            startActivity(Intent(this, SettingActivity::class.java).apply {
+                putExtra(EXTRA_SPORT, "A propos de nous et paramètre")})
         }
 
         return super.onOptionsItemSelected(item)
