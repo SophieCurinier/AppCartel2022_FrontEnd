@@ -3,13 +3,19 @@ package com.example.cartel2022
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.service.autofill.FieldClassification
+import android.widget.Toast
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.cartel2022.model.ApiServices
+import com.example.cartel2022.model.SchoolService
+import com.example.cartel2022.model.SportDto
 import kotlinx.android.synthetic.main.activity_school.*
 
-class SchoolActivity : AppCompatActivity(),SportAdapter.OnItemClickListener {
+class SchoolActivity : AppCompatActivity(),OnSchoolSelectedListener {
     //Change with length of Sport Table
-    private val schoolList = generateDummyList(20)
-    private val adapter = SportAdapter(schoolList, this)
+    private val adapter = SchoolAdapter(this)
+    val schoolService = SchoolService()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,26 +26,21 @@ class SchoolActivity : AppCompatActivity(),SportAdapter.OnItemClickListener {
         school_recycler_view.adapter = adapter
         school_recycler_view.layoutManager = LinearLayoutManager(this)
         school_recycler_view.setHasFixedSize(true)
-    }
+        school_recycler_view.adapter = adapter
+
+        adapter.update(schoolService.findAll())
+        //runCatching { ApiServices().schoolsApiService.findAll().execute() } // (1)
+        //    .onSuccess { adapter.update(it.body() ?: emptyList()) }  // (2)
+        //    .onFailure {
+        //        Toast.makeText(this, "Error on windows loading $it", Toast.LENGTH_LONG).show()  // (3)
+        }
 
 
     //When user clicks on a school button
-    override fun onItemClick(position: Int) {
-        val clickedItem = schoolList[position]
-        adapter.notifyItemChanged(position)
-        val intent = Intent(this, MatchActivity::class.java).apply {
-            putExtra(EXTRA_SCHOOL, clickedItem.sportName)
-        }
+    override fun onSchoolSelected(id: Long) {
+        val intent = Intent(this, MatchActivity::class.java).putExtra(EXTRA_SCHOOL, id)
         startActivity(intent)
     }
 
-    //Only for test while Data Base is not ready
-    private fun generateDummyList(size: Int): ArrayList<SportItem> {
-        val list = ArrayList<SportItem>()
-        for (i in 0 until size) {
-            val item = SportItem("School $i")
-            list += item
-        }
-        return list
-    }
+
 }

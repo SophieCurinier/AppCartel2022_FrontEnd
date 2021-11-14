@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.cartel2022.model.SportDto
 import kotlinx.android.synthetic.main.activity_sport.*
 
 class SportActivity : AppCompatActivity(), SportAdapter.OnItemClickListener {
@@ -34,10 +35,10 @@ class SportActivity : AppCompatActivity(), SportAdapter.OnItemClickListener {
         }
 
     //Only for test while Data Base is not ready
-    private fun generateDummyList(size: Int): ArrayList<SportItem> {
-        val list = ArrayList<SportItem>()
+    private fun generateDummyList(size: Int): ArrayList<SportDto> {
+        val list = ArrayList<SportDto>()
         for (i in 0 until size) {
-            val item = SportItem("Sport $i")
+            val item = SportDto("Sport $i")
             list += item
         }
         return list

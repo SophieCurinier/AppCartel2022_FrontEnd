@@ -5,10 +5,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.cartel2022.model.SportDto
 import kotlinx.android.synthetic.main.sport_item.view.*
 
 class SportAdapter(
-    private val sportList: List<SportItem>,
+    private val sportList: List<SportDto>,
     private val listener: OnItemClickListener
 ) :
     RecyclerView.Adapter<SportAdapter.SportViewHolder>() {
