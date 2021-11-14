@@ -8,6 +8,6 @@ class RankingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ranking)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        title = intent.getStringExtra(EXTRA_MESSAGE)
+        title = intent.getStringExtra(EXTRA_SPORT)
     }
 }

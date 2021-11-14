@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 internal class CustomAdapter(private var itemsList: List<String>) :
     RecyclerView.Adapter<CustomAdapter.MyViewHolder>() {
     internal inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        var itemTextView: TextView = view.findViewById(R.id.itemTextView)
+        var itemTextView: TextView = view.findViewById(R.id.match_itemTextView)
     }
     @NonNull
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {

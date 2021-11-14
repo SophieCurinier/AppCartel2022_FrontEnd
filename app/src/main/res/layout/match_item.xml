@@ -1,26 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/textView2"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:background="@color/grey">
+    android:layout_margin="4dp">
 
-    <TextView
-        android:id="@+id/itemTextView"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.385" />
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:textSize="20sp" />
+        android:layout_height="80dp"
+        android:background="@color/grey"
+        android:padding="8dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:gravity="center|center_vertical"
-        android:text="pute"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/itemTextView"/>
+        <TextView
+            android:id="@+id/match_itemTextView"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="match"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/match_itemTextViewTeam1"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/match_itemTextView"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="Team1"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/match_itemTextViewTeam2"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/match_itemTextView"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="right|center_vertical"
+            android:text="Team2"
+            android:textColor="@color/white" />
+        <TextView
+            android:id="@+id/match_itemTextViewScore"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/match_itemTextView"
+            android:layout_toRightOf="@id/match_itemTextViewTeam1"
+            android:layout_toLeftOf="@id/match_itemTextViewTeam2"
+            android:layout_alignParentBottom="true"
+            android:gravity="center|center_vertical"
+            android:text="Score"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
