@@ -8,11 +8,21 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.cartel2022.model.SportDto
 import kotlinx.android.synthetic.main.sport_item.view.*
 
-class SportAdapter(
-    private val sportList: List<SportDto>,
-    private val listener: OnItemClickListener
-) :
-    RecyclerView.Adapter<SportAdapter.SportViewHolder>() {
+class SportAdapter(val listener: OnSchoolSelectedListener) : RecyclerView.Adapter<SportAdapter.SportViewHolder>() {
+
+    inner class SportViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+        val name: TextView = itemView.findViewById(R.id.text_view_1)
+    }
+
+    private val items = mutableListOf<SportDto>()
+
+    fun update(windows: List<SportDto>) {  // (4)
+        items.clear()
+        items.addAll(windows)
+        notifyDataSetChanged()
+    }
+
+    override fun getItemCount() = items.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SportViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.sport_item,
@@ -22,30 +32,17 @@ class SportAdapter(
     }
 
     override fun onBindViewHolder(holder: SportViewHolder, position: Int) {
-        val currentItem = sportList[position]
-
-        holder.textView1.text = currentItem.sportName
-    }
-
-    override fun getItemCount() = sportList.size
-
-    inner class SportViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
-        View.OnClickListener {
-        val textView1: TextView = itemView.text_view_1
-
-        init {
-            itemView.setOnClickListener(this)
-        }
-
-        override fun onClick(v: View?) {
-            val position = adapterPosition
-            if (position != RecyclerView.NO_POSITION) {
-                listener.onItemClick(position)
-            }
+        val currentItem = items[position]
+        holder.apply {
+            name.text = currentItem.name
+            itemView.setOnClickListener { listener.onSchoolSelected(currentItem.id) }
         }
     }
 
-    interface OnItemClickListener {
-        fun onItemClick(position: Int)
+    override fun onViewRecycled(holder: SportViewHolder) { // (2)
+        super.onViewRecycled(holder)
+        holder.apply {
+            itemView.setOnClickListener(null)
+        }
     }
 }

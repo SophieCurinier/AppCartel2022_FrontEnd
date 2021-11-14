@@ -11,6 +11,9 @@ import com.example.cartel2022.model.ApiServices
 import com.example.cartel2022.model.SchoolService
 import com.example.cartel2022.model.SportDto
 import kotlinx.android.synthetic.main.activity_school.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class SchoolActivity : AppCompatActivity(),OnSchoolSelectedListener {
     //Change with length of Sport Table
@@ -28,12 +31,31 @@ class SchoolActivity : AppCompatActivity(),OnSchoolSelectedListener {
         school_recycler_view.setHasFixedSize(true)
         school_recycler_view.adapter = adapter
 
-        adapter.update(schoolService.findAll())
+        //adapter.update(schoolService.findAll())
+
         //runCatching { ApiServices().schoolsApiService.findAll().execute() } // (1)
         //    .onSuccess { adapter.update(it.body() ?: emptyList()) }  // (2)
         //    .onFailure {
         //        Toast.makeText(this, "Error on windows loading $it", Toast.LENGTH_LONG).show()  // (3)
+        lifecycleScope.launch(context = Dispatchers.IO) { // (1)
+            runCatching { ApiServices().schoolsApiService.findAll().execute() } // (2)
+                .onSuccess {
+                    withContext(context = Dispatchers.Main) { // (3)
+                        adapter.update(it.body() ?: emptyList())
+                    }
+                }
+                .onFailure {
+                    withContext(context = Dispatchers.Main) { // (3)
+                        Toast.makeText(
+                            applicationContext,
+                            "Error on windows loading $it",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
+                }
         }
+
+    }
 
 
     //When user clicks on a school button

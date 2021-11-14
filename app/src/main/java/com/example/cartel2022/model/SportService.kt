@@ -1,6 +1,6 @@
 package com.example.cartel2022.model
 
-class SchoolService {
+class SportService {
     companion object {
         // Fake School
         val SCHOOLS: List<SchoolDto> = listOf(
@@ -17,7 +17,7 @@ class SchoolService {
         )
     }
 
-    fun findById(id: Long) = SCHOOLS.firstOrNull { it.id == id}
+    fun findById(id: Long) = SPORTS.firstOrNull { it.id == id}
 
-    fun findAll() = SCHOOLS.sortedBy { it.name }
+    fun findAll() = SPORTS.sortedBy { it.name }
 }
