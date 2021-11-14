@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.cartel2022">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.cartel2022"
+    tools:ignore="CoarseFineLocation">
 
 
 
@@ -36,7 +38,7 @@
         <activity
             android:name=".MapsActivity"
             android:exported="false"
-            android:label="@string/title_activity_maps">
+            android:label="@string/title_activity_maps"/>
         <activity
             android:name=".SocialNetworkActivity"
             android:exported="false" />
@@ -73,6 +75,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+    </application>
 
 
 </manifest>

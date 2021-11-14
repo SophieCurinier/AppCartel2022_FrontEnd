@@ -34,10 +34,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, SocialNetworkActivity::class.java))
         }
         if (id == R.id.action_urgency_contact) {
-            startActivity(Intent(this, SocialNetworkActivity::class.java))
+            startActivity(Intent(this, ContactsActivity::class.java))
         }
         if (id == R.id.action_map) {
-            startActivity(Intent(this, SocialNetworkActivity::class.java))
+            startActivity(Intent(this, MapsActivity::class.java))
         }
         if (id == R.id.action_setting){
             startActivity(Intent(this, SocialNetworkActivity::class.java))

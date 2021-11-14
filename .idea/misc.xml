@@ -3,20 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-
-        <entry key="..\:/Users/sophi/Documents/Majeure/CARTEL/AppCartel2022_FrontEnd/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/sophi/Documents/Majeure/CARTEL/AppCartel2022_FrontEnd/app/src/main/res/layout/activity_match.xml" value="0.1" />
-        <entry key="..\:/Users/sophi/Documents/Majeure/CARTEL/AppCartel2022_FrontEnd/app/src/main/res/layout/activity_sport.xml" value="0.25" />
-        <entry key="..\:/Users/sophi/Documents/Majeure/CARTEL/AppCartel2022_FrontEnd/app/src/main/res/layout/item.xml" value="0.3390928725701944" />
-        <entry key="app/src/main/res/layout/activity_contacts.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.22708333333333333" />
-        <entry key="app/src/main/res/layout/activity_maps.xml" value="0.21195652173913043" />
-        <entry key="app/src/main/res/layout/activity_match.xml" value="0.19519927536231885" />
-        <entry key="app/src/main/res/layout/activity_schooln.xml" value="0.19519927536231885" />
-        <entry key="app/src/main/res/layout/activity_sport.xml" value="0.19519927536231885" />
-        <entry key="app/src/main/res/layout/match_item.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/sport_item.xml" value="0.19519927536231885" />
-
+        <entry key="..\:/Users/sophi/Documents/Majeure/CARTEL/AppCartel2022_FrontEnd/app/src/main/res/layout/activity_contacts.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/sophi/Documents/Majeure/CARTEL/AppCartel2022_FrontEnd/app/src/main/res/layout/activity_drawer.xml" value="0.184375" />
         <entry key="..\:/Users/sophi/Documents/Majeure/CARTEL/AppCartel2022_FrontEnd/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/sophi/Documents/Majeure/CARTEL/AppCartel2022_FrontEnd/app/src/main/res/layout/activity_main_drawer.xml" value="0.10144927536231885" />

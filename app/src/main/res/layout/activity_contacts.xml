@@ -85,7 +85,7 @@
         android:padding="4dp">
 
         <TextView
-            android:id="@+id/Nom"
+            android:id="@+id/PrezName"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
@@ -93,7 +93,7 @@
             android:gravity="center"
             android:text="Ryan Kaoukeb :"
             android:textColor="@color/white"
-            android:textSize="17sp"/>
+            android:textSize="17sp" />
 
     </RelativeLayout>
 
@@ -166,7 +166,7 @@
         android:padding="4dp">
 
         <TextView
-            android:id="@+id/Nom"
+            android:id="@+id/VicePrezName"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
@@ -174,7 +174,7 @@
             android:gravity="center"
             android:text="Pierre Maindron :"
             android:textColor="@color/white"
-            android:textSize="17sp"/>
+            android:textSize="17sp" />
 
     </RelativeLayout>
 
@@ -248,7 +248,7 @@
         android:padding="4dp">
 
         <TextView
-            android:id="@+id/Nom"
+            android:id="@+id/VicePrezName2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
@@ -329,7 +329,7 @@
         android:padding="4dp">
 
         <TextView
-            android:id="@+id/Nom"
+            android:id="@+id/VicePrezName3"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
