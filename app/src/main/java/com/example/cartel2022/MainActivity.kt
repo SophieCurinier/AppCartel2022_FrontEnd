@@ -1,11 +1,13 @@
 package com.example.cartel2022
 
 import android.content.Intent
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
 
 const val EXTRA_SPORT = "com.example.Cartel2022.SPORT"
 const val EXTRA_SCHOOL = "com.example.Cartel2022.SCHOOL"
@@ -17,6 +19,34 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        menuInflater.inflate(R.menu.menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // Handle action bar item clicks here.
+        val id = item.getItemId()
+
+        if (id == R.id.action_social_network) {
+            startActivity(Intent(this, SocialNetworkActivity::class.java))
+        }
+        if (id == R.id.action_urgency_contact) {
+            startActivity(Intent(this, SocialNetworkActivity::class.java))
+        }
+        if (id == R.id.action_map) {
+            startActivity(Intent(this, SocialNetworkActivity::class.java))
+        }
+        if (id == R.id.action_setting){
+            startActivity(Intent(this, SocialNetworkActivity::class.java))
+        }
+
+        return super.onOptionsItemSelected(item)
+
+    }
+
     /** Called when the user taps the Sport button */
     fun switchSport(view: View) {
         val editText = findViewById<Button>(R.id.buttonSport)
