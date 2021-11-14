@@ -8,6 +8,6 @@ class ContactsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contacts)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        title = intent.getStringExtra(EXTRA_SPORT)
+        title = intent.getStringExtra(EXTRA_MENU)
     }
 }

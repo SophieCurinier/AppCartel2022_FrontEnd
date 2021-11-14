@@ -13,7 +13,7 @@
     <string name="instagram">Instagram</string>
     <string name="web_site">Site Internet</string>
     <string name="url_facebook">https://www.facebook.com/profile.php?id=100058158610701</string>
-    <string name="url_instagram">https://https://www.instagram.com/cartel_sainte_2022/</string>
+    <string name="url_instagram">https://www.instagram.com/cartel_sainte_2022</string>
     <string name="url_web_site">https://www.cartel2022.com/</string>
     <string name="title_activity_basic">BasicActivity</string>
     <!-- Strings used for fragments for navigation -->

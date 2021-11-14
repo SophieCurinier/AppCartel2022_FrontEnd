@@ -7,17 +7,20 @@ import android.view.View
 import android.widget.Button
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 
+//Intent after pushing on one of sport buttons in sport activity
 const val EXTRA_SPORT = "com.example.Cartel2022.SPORT"
+//Intent after pushing on one of school buttons in school activity
 const val EXTRA_SCHOOL = "com.example.Cartel2022.SCHOOL"
-const val EXTRA_MATCHSCHOOL = "com.example.Cartel2022.MATCHSCOOL"
+//Intent after clicking on planning button
+const val EXTRA_PLANNING = "com.example.Cartel2022.PLANNING"
+//Intent after clicking on one of menu button in menu option
+const val EXTRA_MENU = "com.example.Cartel2022.MENU"
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -32,29 +35,28 @@ class MainActivity : AppCompatActivity() {
 
         if (id == R.id.action_social_network) {
             startActivity(Intent(this, SocialNetworkActivity::class.java).apply {
-                putExtra(EXTRA_SPORT, "Réseaux Sociaux")})
+                putExtra(EXTRA_MENU, "Réseaux Sociaux")})
         }
         if (id == R.id.action_urgency_contact) {
             startActivity(Intent(this, ContactsActivity::class.java).apply {
-                putExtra(EXTRA_SPORT, "Contact des responsables")})
+                putExtra(EXTRA_MENU, "Contact des responsables")})
         }
         if (id == R.id.action_map) {
             startActivity(Intent(this, MapsActivity::class.java).apply {
-                putExtra(EXTRA_SPORT, "Plan")})
+                putExtra(EXTRA_MENU, "Plan")})
         }
         if (id == R.id.action_setting){
             startActivity(Intent(this, SettingActivity::class.java).apply {
-                putExtra(EXTRA_SPORT, "A propos de nous et paramètre")})
+                putExtra(EXTRA_MENU, "A propos de nous et paramètre")})
         }
 
         return super.onOptionsItemSelected(item)
 
     }
 
-    /** Called when the user taps the Sport button */
+    // Called when the user taps the Sport button */
     fun switchSport(view: View) {
-        val editText = findViewById<Button>(R.id.buttonSport)
-        val message = editText.text.toString()
+        val message = findViewById<Button>(R.id.buttonSport).text.toString()
         val intent = Intent(this, SportActivity::class.java).apply {
             putExtra(EXTRA_SPORT, message)
         }
@@ -69,16 +71,16 @@ class MainActivity : AppCompatActivity() {
         }
         startActivity(intent)
     }
-    //Called when the user clicks on the Ranking button//
-    // Called when the user taps the Sport button //
+    //Called when the user clicks on the Ranking button
     fun switchPlanning(view: View) {
         val editText = findViewById<Button>(R.id.buttonInstagram)
         val message = editText.text.toString()
         val intent = Intent(this, PlanningActivity::class.java).apply {
-            putExtra(EXTRA_SPORT, message)
+            putExtra(EXTRA_PLANNING, message)
         }
         startActivity(intent)
     }
+    //Called when the user clicks on the School button
     fun switchSchool(view: View) {
         val editText = findViewById<Button>(R.id.buttonFacebook)
         val message = editText.text.toString()

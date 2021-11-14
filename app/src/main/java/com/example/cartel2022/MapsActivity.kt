@@ -19,7 +19,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        title = intent.getStringExtra(EXTRA_SPORT)
+        title = intent.getStringExtra(EXTRA_MENU)
 
         binding = ActivityMapsBinding.inflate(layoutInflater)
         setContentView(binding.root)

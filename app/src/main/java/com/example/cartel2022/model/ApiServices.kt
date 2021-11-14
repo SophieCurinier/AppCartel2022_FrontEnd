@@ -7,8 +7,24 @@ class ApiServices {
     val schoolsApiService : SchoolApiService by lazy {
         Retrofit.Builder()
             .addConverterFactory(MoshiConverterFactory.create())
-            .baseUrl("http://localhost:8080/")
+            .baseUrl("https://cartel2022.cleverapps.io/api/")
             .build()
             .create(SchoolApiService::class.java)
+    }
+
+    val sportsApiService : SportApiService by lazy {
+        Retrofit.Builder()
+            .addConverterFactory(MoshiConverterFactory.create())
+            .baseUrl("https://cartel2022.cleverapps.io/api/")
+            .build()
+            .create(SportApiService::class.java)
+    }
+
+    val matchsApiService : MatchApiService by lazy {
+        Retrofit.Builder()
+            .addConverterFactory(MoshiConverterFactory.create())
+            .baseUrl("https://cartel2022.cleverapps.io/api/")
+            .build()
+            .create(MatchApiService::class.java)
     }
 }
