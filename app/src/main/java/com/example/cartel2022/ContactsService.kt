@@ -11,9 +11,12 @@ class ContactsService {
             ContactOrga(5, "Vice-Président", "Hébergement, Transports, Restauration", "Pierre MAINDRON", "06 87 77 40 44"),
             ContactOrga(6, "Vice-Président", "Hébergement, Transports, Restauration", "Pierre MAINDRON", "06 87 77 40 44"),
             ContactOrga(7, "Vice-Président", "Hébergement, Transports, Restauration", "Pierre MAINDRON", "06 87 77 40 44"),
-            ContactOrga(8, "Vice-Président", "Hébergement, Transports, Restauration", "Pierre MAINDRON", "06 87 77 40 44")
+            ContactOrga(8, "Vice-Président", "Hébergement, Transports, Restauration", "Pierre MAINDRON", "06 87 77 40 44"),
+            ContactOrga(9, "Vice-Président", "Hébergement, Transports, Restauration", "Pierre MAINDRON", "06 87 77 40 44"),
+            ContactOrga(10, "Vice-Président", "Hébergement, Transports, Restauration", "Pierre MAINDRON", "06 87 77 40 44")
 
-            )
+
+        )
 
         fun findById(id: Long) = CONTACTS.firstOrNull { it.id == id}
 

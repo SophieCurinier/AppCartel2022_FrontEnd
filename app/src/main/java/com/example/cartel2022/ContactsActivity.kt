@@ -17,8 +17,8 @@ class ContactsActivity : AppCompatActivity() {
         title = intent.getStringExtra(EXTRA_MENU)
 
 
-        val recyclerView = findViewById<RecyclerView>(R.id.contacts_list) // (2)
-        val adapter = ContactsAdapter() // (3)
+        val recyclerView = findViewById<RecyclerView>(R.id.contacts_list)
+        val adapter = ContactsAdapter()
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
