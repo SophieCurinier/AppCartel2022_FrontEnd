@@ -19,12 +19,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Cartel2022">
-        <activity
-            android:name=".model.PartnerActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SettingActivity"
-            android:exported="false" />
+
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -35,11 +30,17 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/AIzaSyASEvqoaXroyDfvLBD_zA6DgQYzyaYIDDw" />
+            android:value="AIzaSyBxyx1K1FDkXfx7CsIT_yDsAoygbR9Ggvo" />
 
         <activity
+            android:name=".model.PartnerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SettingActivity"
+            android:exported="false" />
+        <activity
             android:name=".MapsActivity"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/title_activity_maps"
             android:parentActivityName=".MainActivity" />
         <activity
