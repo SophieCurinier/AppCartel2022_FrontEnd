@@ -18,9 +18,33 @@ class MatchActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_match)
 
+        val adapter = MatchAdapter()
+
+        match_recyclerview.layoutManager = LinearLayoutManager(this)
+        match_recyclerview.setHasFixedSize(true)
+        match_recyclerview.adapter = adapter
+
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         if (intent.getStringExtra(EXTRA_SPORT) != null){
             title = intent.getStringExtra(EXTRA_SPORT)
+            val sportname : String = intent.getStringExtra(EXTRA_SPORT).toString()
+            lifecycleScope.launch(context = Dispatchers.IO) { // (1)
+                runCatching { ApiServices().matchsSportApiService.findBySport("FOOTBALL%20M").execute() } // (2)
+                    .onSuccess {
+                        withContext(context = Dispatchers.Main) { // (3)
+                            adapter.update(it.body() ?: emptyList())
+                        }
+                    }
+                    .onFailure {
+                        withContext(context = Dispatchers.Main) { // (3)
+                            Toast.makeText(
+                                applicationContext,
+                                "Error on matchs loading $it",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
+                    }
+            }
         }
         else if (intent.getStringExtra(EXTRA_SCHOOL) != null){
             title = intent.getStringExtra(EXTRA_SCHOOL)
@@ -29,11 +53,7 @@ class MatchActivity : AppCompatActivity() {
             title = intent.getStringExtra(EXTRA_MENU)
         }
 
-        val adapter = MatchAdapter()
 
-        match_recyclerview.layoutManager = LinearLayoutManager(this)
-        match_recyclerview.setHasFixedSize(true)
-        match_recyclerview.adapter = adapter
 
 
         lifecycleScope.launch(context = Dispatchers.IO) { // (1)

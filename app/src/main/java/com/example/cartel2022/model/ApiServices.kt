@@ -27,4 +27,12 @@ class ApiServices {
             .build()
             .create(MatchApiService::class.java)
     }
+
+    val matchsSportApiService : MatchSportApiService by lazy {
+        Retrofit.Builder()
+            .addConverterFactory(MoshiConverterFactory.create())
+            .baseUrl("https://cartel2022.cleverapps.io/api/")
+            .build()
+            .create(MatchSportApiService::class.java)
+    }
 }

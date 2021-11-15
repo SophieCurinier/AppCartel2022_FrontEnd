@@ -50,7 +50,7 @@
         app:layout_constraintStart_toStartOf="@id/rankingGuidelineLeft"
         app:layout_constraintTop_toBottomOf="@+id/rankingSpinner"
         tools:ignore="MissingConstraints"
-        tools:listitem="@layout/sport_item" />
+        tools:listitem="@layout/ranking_item" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

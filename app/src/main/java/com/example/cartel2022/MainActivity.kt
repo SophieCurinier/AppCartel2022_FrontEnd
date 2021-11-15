@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
         val editText = findViewById<Button>(R.id.buttonWebSite)
         val message = editText.text.toString()
         val intent = Intent(this, RankingActivity::class.java).apply {
-            putExtra(EXTRA_SPORT, message)
+            putExtra(EXTRA_MENU, message)
         }
         startActivity(intent)
     }
