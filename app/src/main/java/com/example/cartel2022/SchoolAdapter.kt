@@ -39,7 +39,7 @@ class SchoolAdapter(
         val currentItem = items[position]
         holder.apply {
             holder.textView1.text = currentItem.name
-            itemView.setOnClickListener { listener.onItemSelected(currentItem.id) } // (1)
+            itemView.setOnClickListener { listener.onItemSelected(currentItem.id, currentItem.name) } // (1)
         }
     }
 

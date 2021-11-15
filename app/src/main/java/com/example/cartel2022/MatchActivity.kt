@@ -19,7 +19,15 @@ class MatchActivity : AppCompatActivity() {
         setContentView(R.layout.activity_match)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        title = "id :" + intent.getStringExtra(EXTRA_SPORT)
+        if (intent.getStringExtra(EXTRA_SPORT) != null){
+            title = intent.getStringExtra(EXTRA_SPORT)
+        }
+        else if (intent.getStringExtra(EXTRA_SCHOOL) != null){
+            title = intent.getStringExtra(EXTRA_SCHOOL)
+        }
+        else {
+            title = intent.getStringExtra(EXTRA_MENU)
+        }
 
         val adapter = MatchAdapter()
 

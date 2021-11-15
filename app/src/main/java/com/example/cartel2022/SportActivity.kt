@@ -49,9 +49,9 @@ class SportActivity : AppCompatActivity(), OnItemSelectedListener {
     }
 
 
-    override fun onItemSelected(id: Long) {
+    override fun onItemSelected(id: Long, name: String) {
         val intent = Intent(this, MatchActivity::class.java).apply {
-            putExtra(EXTRA_SPORT, id.toString()) }
+            putExtra(EXTRA_SPORT, name) }
             startActivity(intent)
         }
 }
