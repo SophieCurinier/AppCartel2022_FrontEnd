@@ -84,7 +84,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/Circonstance1"
             android:layout_alignParentRight="true"
-            android:text="06 87 77 40 44"
+            android:text="06 87 77 40 44"/>
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

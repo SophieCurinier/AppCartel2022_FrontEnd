@@ -47,6 +47,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintTop_toBottomOf="@+id/guideline3"
-        tools:listitem="@layout/contact_item"
+        tools:listitem="@layout/contact_item"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
