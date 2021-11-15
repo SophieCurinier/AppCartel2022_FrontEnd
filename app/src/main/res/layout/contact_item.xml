@@ -56,7 +56,8 @@
             android:gravity="center"
             android:text="Vice-Président"
             android:textColor="@color/black"
-            android:textSize="17sp" />
+            android:textSize="17sp"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/Circonstance1"
@@ -72,9 +73,10 @@
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_below="@+id/Circonstance1"
-            android:text="Pierre Maindron"
+            android:text="Pierre MAINDRON"
             android:textColor="@color/black"
             android:textSize="17sp"
+            android:textStyle="bold"
             android:paddingTop="10dp"/>
 
         <Button
