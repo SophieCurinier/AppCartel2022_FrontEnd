@@ -20,6 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Cartel2022">
         <activity
+            android:name=".model.PartnerActivity"
+            android:exported="false" />
+        <activity
             android:name=".SettingActivity"
             android:exported="false" />
         <!--
@@ -77,4 +80,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>

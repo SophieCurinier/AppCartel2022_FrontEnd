@@ -14,7 +14,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class SportActivity : AppCompatActivity(), OnSchoolSelectedListener {
+class SportActivity : AppCompatActivity(), OnItemSelectedListener {
 
     private val adapter = SportAdapter(this)
 
@@ -49,9 +49,10 @@ class SportActivity : AppCompatActivity(), OnSchoolSelectedListener {
     }
 
 
-    override fun onSchoolSelected(id: Long) {
-        val intent = Intent(this, MatchActivity::class.java).putExtra(EXTRA_SPORT, id)
-        startActivity(intent)
-    }
+    override fun onItemSelected(id: Long) {
+        val intent = Intent(this, MatchActivity::class.java).apply {
+            putExtra(EXTRA_SPORT, id.toString()) }
+            startActivity(intent)
+        }
 }
 

@@ -19,7 +19,7 @@ class MatchActivity : AppCompatActivity() {
         setContentView(R.layout.activity_match)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        title = intent.getStringExtra(EXTRA_SPORT)
+        title = "id :" + intent.getStringExtra(EXTRA_SPORT)
 
         val adapter = MatchAdapter()
 
@@ -27,20 +27,21 @@ class MatchActivity : AppCompatActivity() {
         match_recyclerview.setHasFixedSize(true)
         match_recyclerview.adapter = adapter
 
+
         lifecycleScope.launch(context = Dispatchers.IO) { // (1)
             runCatching { ApiServices().matchsApiService.findAll().execute() } // (2)
                 .onSuccess {
                     withContext(context = Dispatchers.Main) { // (3)
-                        adapter.update(it.body() ?: emptyList())
+                    adapter.update(it.body() ?: emptyList())
                     }
                 }
                 .onFailure {
                     withContext(context = Dispatchers.Main) { // (3)
-                        Toast.makeText(
-                            applicationContext,
-                            "Error on matchs loading $it",
-                            Toast.LENGTH_LONG
-                        ).show()
+                    Toast.makeText(
+                             applicationContext,
+                        "Error on matchs loading $it",
+                             Toast.LENGTH_LONG
+                    ).show()
                     }
                 }
         }

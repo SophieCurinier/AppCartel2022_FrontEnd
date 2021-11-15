@@ -6,10 +6,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cartel2022.model.SchoolDto
-import kotlinx.android.synthetic.main.sport_item.view.*
 
 class SchoolAdapter(
-    private val listener: OnSchoolSelectedListener
+    private val listener: OnItemSelectedListener
 ) :
     RecyclerView.Adapter<SchoolAdapter.SchoolViewHolder>() {
 
@@ -40,7 +39,7 @@ class SchoolAdapter(
         val currentItem = items[position]
         holder.apply {
             holder.textView1.text = currentItem.name
-            itemView.setOnClickListener { listener.onSchoolSelected(currentItem.id) } // (1)
+            itemView.setOnClickListener { listener.onItemSelected(currentItem.id) } // (1)
         }
     }
 
