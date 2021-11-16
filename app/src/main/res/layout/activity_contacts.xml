@@ -44,10 +44,11 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/contacts_list"
+        android:id="@+id/contacts_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clipToPadding="false"
-        tools:listitem="@layout/contact_item"/>
+        tools:listitem="@layout/contact_item"
+        tools:ignore="MissingConstraints" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

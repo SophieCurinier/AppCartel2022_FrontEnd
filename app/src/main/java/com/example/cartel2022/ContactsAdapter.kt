@@ -6,14 +6,15 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ContactsAdapter : RecyclerView.Adapter<ContactsAdapter.ContactsViewHolder>(){
+class ContactsAdapter(val listener: OnItemSelectedListener) : RecyclerView.Adapter<ContactsAdapter.ContactsViewHolder>() {
 
-    inner class ContactsViewHolder(view: View): RecyclerView.ViewHolder(view){
-        val poste : TextView = view.findViewById(R.id.Poste1)
-        val circonstance : TextView = view.findViewById(R.id.Circonstance1)
-        val nom : TextView = view.findViewById(R.id.nom1)
-        val numero : TextView = view.findViewById(R.id.numero1)
+    inner class ContactsViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val poste: TextView = view.findViewById(R.id.Poste1)
+        val circonstance: TextView = view.findViewById(R.id.Circonstance1)
+        val nom: TextView = view.findViewById(R.id.nom1)
+        val numero: TextView = view.findViewById(R.id.numero1)
     }
+
     private val items = mutableListOf<ContactOrga>()
 
     fun update(contacts: List<ContactOrga>) {
@@ -37,8 +38,8 @@ class ContactsAdapter : RecyclerView.Adapter<ContactsAdapter.ContactsViewHolder>
             circonstance.text = contact.circonstance
             nom.text = contact.nom
             numero.text = contact.numero
+            itemView.setOnClickListener { listener.onItemSelected(contact.id, contact.numero) }
+
         }
     }
-
-
 }

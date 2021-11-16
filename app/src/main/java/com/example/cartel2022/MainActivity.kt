@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity() {
 
     //Called when the user clicks on the map button
     fun switchMaps(view: View) {
-        val editText = findViewById<Button>(R.id.buttonSchool)
+        val editText = findViewById<Button>(R.id.buttonMap)
         val message = editText.text.toString()
         val intent = Intent(this, MapsActivity::class.java).apply {
             putExtra(EXTRA_MENU, message)
