@@ -6,8 +6,8 @@
     <string name="ranking">Classement</string>
     <string name="urgency_contact">Contact des responsables</string>
     <string name="map">Plan</string>
-    <string name="partner">Partenaire</string>
-    <string name="aboutUs">A propos de nous</string>
+    <string name="partner">Partenaires</string>
+    <string name="aboutUs">À propos de nous</string>
     <string name="sports">Sports</string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="facebook">Facebook</string>
@@ -15,7 +15,7 @@
     <string name="web_site">Site Internet</string>
     <string name="url_facebook">https://www.facebook.com/profile.php?id=100058158610701</string>
     <string name="url_instagram">https://www.instagram.com/cartel_sainte_2022</string>
-    <string name="url_web_site">https://www.cartel2022.com/</string>
+    <string name="url_web_site">https://www.cartel2022.fr/</string>
     <string name="title_activity_basic">BasicActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
