@@ -33,6 +33,11 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBxyx1K1FDkXfx7CsIT_yDsAoygbR9Ggvo" />
 
+
+        <!-- android:name : nom de la classe concernée
+             android:screenOrientation="portrait" : bloque la rotation de l'écran en forçant le mode portrait sur l'application
+             android:exported="false" : bloque l'ouverture de l'activité depuis tout acteur extérieur à l'application
+             android:parentActivityName :nom de l'activité parente, à laquelle mène le bouton de retour-->
         <activity
             android:name=".PartnerActivity"
             android:screenOrientation="portrait"
@@ -80,10 +85,10 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- android:exported="true" car cette activité doit pouvoir être lancée par le système du téléphone -->
     </application>
 
 </manifest>
