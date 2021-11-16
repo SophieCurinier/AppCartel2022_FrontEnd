@@ -1,11 +1,12 @@
-package com.example.cartel2022
+package com.example.cartel2022.model
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.cartel2022.model.PartnerDto
+import com.example.cartel2022.OnUrlSelectedListener
+import com.example.cartel2022.R
 
 class PartnerAdapter(val listener: OnUrlSelectedListener): RecyclerView.Adapter<PartnerAdapter.PartnerViewHolder>() {
 

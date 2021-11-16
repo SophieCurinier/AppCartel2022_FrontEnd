@@ -6,9 +6,8 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.cartel2022.model.ApiServices
-import com.example.cartel2022.model.SportDto
-import com.example.cartel2022.model.SportService
+import com.example.cartel2022.model.ApiService
+import com.example.cartel2022.model.SportAdapter
 import kotlinx.android.synthetic.main.activity_sport.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -25,12 +24,12 @@ class SportActivity : AppCompatActivity(), OnItemSelectedListener {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         title = intent.getStringExtra(EXTRA_SPORT)
 
-        sport_recycler_view.layoutManager = LinearLayoutManager(this)
-        sport_recycler_view.setHasFixedSize(true)
-        sport_recycler_view.adapter = adapter
+        sport_recyclerview.layoutManager = LinearLayoutManager(this)
+        sport_recyclerview.setHasFixedSize(true)
+        sport_recyclerview.adapter = adapter
 
         lifecycleScope.launch(context = Dispatchers.IO) { // (1)
-            runCatching { ApiServices().sportsApiService.findAll().execute() } // (2)
+            runCatching { ApiService().sportApiService.findAll().execute() } // (2)
                 .onSuccess {
                     withContext(context = Dispatchers.Main) { // (3)
                         adapter.update(it.body() ?: emptyList())

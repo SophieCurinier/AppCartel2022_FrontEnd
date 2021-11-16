@@ -1,11 +1,10 @@
 package com.example.cartel2022.model
 
-import android.icu.util.TimeUnit
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
-class ApiServices {
-    val schoolsApiService : SchoolApiService by lazy {
+class ApiService {
+    val schoolApiService : SchoolApiService by lazy {
         Retrofit.Builder()
             .addConverterFactory(MoshiConverterFactory.create())
             .baseUrl("https://cartel2022.cleverapps.io/api/")
@@ -13,7 +12,7 @@ class ApiServices {
             .create(SchoolApiService::class.java)
     }
 
-    val sportsApiService : SportApiService by lazy {
+    val sportApiService : SportApiService by lazy {
         Retrofit.Builder()
             .addConverterFactory(MoshiConverterFactory.create())
             .baseUrl("https://cartel2022.cleverapps.io/api/")
@@ -21,7 +20,7 @@ class ApiServices {
             .create(SportApiService::class.java)
     }
 
-    val matchsApiService : MatchApiService by lazy {
+    val matchApiService : MatchApiService by lazy {
         Retrofit.Builder()
             .addConverterFactory(MoshiConverterFactory.create())
             .baseUrl("https://cartel2022.cleverapps.io/api/")

@@ -35,5 +35,4 @@ class SocialNetworkActivity : AppCompatActivity() {
         openURL.data = Uri.parse(url)
         startActivity(openURL)
     }
-
 }

@@ -6,12 +6,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.example.cartel2022.model.ContactAdapter
+import com.example.cartel2022.model.ContactService
 import kotlinx.android.synthetic.main.activity_contacts.*
 
-class ContactsActivity : AppCompatActivity(), OnItemSelectedListener {
+class ContactActivity : AppCompatActivity(), OnItemSelectedListener {
 
-    private val adapter = ContactsAdapter(this)
+    private val adapter = ContactAdapter(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +27,7 @@ class ContactsActivity : AppCompatActivity(), OnItemSelectedListener {
         contacts_recyclerview.setHasFixedSize(true)
         contacts_recyclerview.adapter = adapter
 
-        adapter.update(ContactsService.findAll())
+        adapter.update(ContactService.findAll())
     }
 
     override fun onItemSelected(id: Long, tel: String) {
