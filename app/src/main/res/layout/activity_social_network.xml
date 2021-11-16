@@ -49,31 +49,31 @@
         tools:ignore="MissingConstraints,Suspicious0dp" />
 
     <Button
-        android:id="@+id/buttonFacebook"
+        android:id="@+id/buttonSchool"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:onClick="switchFacebook"
         android:text="@string/facebook"
         android:backgroundTint="#3b5998"
-        app:layout_constraintBottom_toTopOf="@+id/buttonInstagram"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPlanning"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/homeLogoView" />
 
     <Button
-        android:id="@+id/buttonInstagram"
+        android:id="@+id/buttonPlanning"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:onClick="switchInstagram"
         android:text="@string/instagram"
         android:backgroundTint="#C13584"
-        app:layout_constraintBottom_toTopOf="@+id/buttonWebSite"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMap"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/buttonFacebook" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonSchool" />
 
     <Button
-        android:id="@+id/buttonWebSite"
+        android:id="@+id/buttonMap"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:onClick="switchWebSite"
@@ -81,7 +81,7 @@
         android:backgroundTint="#3A393E"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/buttonInstagram" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonPlanning" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

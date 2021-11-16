@@ -27,9 +27,9 @@ class MatchActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         if (intent.getStringExtra(EXTRA_SPORT) != null){
             title = intent.getStringExtra(EXTRA_SPORT)
-            val sportname : String = intent.getStringExtra(EXTRA_SPORT).toString()
+            val sportName : String = intent.getStringExtra(EXTRA_SPORT).toString()
             lifecycleScope.launch(context = Dispatchers.IO) { // (1)
-                runCatching { ApiServices().matchsSportApiService.findBySport("FOOTBALL%20M").execute() } // (2)
+                runCatching { ApiServices().matchsApiService.findBySport(sportName).execute() }
                     .onSuccess {
                         withContext(context = Dispatchers.Main) { // (3)
                             adapter.update(it.body() ?: emptyList())
@@ -48,31 +48,55 @@ class MatchActivity : AppCompatActivity() {
         }
         else if (intent.getStringExtra(EXTRA_SCHOOL) != null){
             title = intent.getStringExtra(EXTRA_SCHOOL)
+            val schoolName : String = intent.getStringExtra(EXTRA_SCHOOL).toString()
+            lifecycleScope.launch(context = Dispatchers.IO) { // (1)
+                runCatching { ApiServices().matchsApiService.findBySchool(schoolName).execute() }
+                    .onSuccess {
+                        withContext(context = Dispatchers.Main) { // (3)
+                            adapter.update(it.body() ?: emptyList())
+                        }
+                    }
+                    .onFailure {
+                        withContext(context = Dispatchers.Main) { // (3)
+                            Toast.makeText(
+                                applicationContext,
+                                "Error on matchs loading $it",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
+                    }
+            }
         }
         else {
             title = intent.getStringExtra(EXTRA_MENU)
+            lifecycleScope.launch(context = Dispatchers.IO) { // (1)
+                runCatching { ApiServices().matchsApiService.findAll().execute() } // (2)
+                    .onSuccess {
+                        withContext(context = Dispatchers.Main) { // (3)
+                            adapter.update(it.body() ?: emptyList())
+                            Toast.makeText(
+                                applicationContext,
+                                "Wesh $it",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
+                    }
+                    .onFailure {
+                        withContext(context = Dispatchers.Main) { // (3)
+                            Toast.makeText(
+                                applicationContext,
+                                "Error on matchs loading $it",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
+                    }
+            }
         }
 
 
 
 
-        lifecycleScope.launch(context = Dispatchers.IO) { // (1)
-            runCatching { ApiServices().matchsApiService.findAll().execute() } // (2)
-                .onSuccess {
-                    withContext(context = Dispatchers.Main) { // (3)
-                    adapter.update(it.body() ?: emptyList())
-                    }
-                }
-                .onFailure {
-                    withContext(context = Dispatchers.Main) { // (3)
-                    Toast.makeText(
-                             applicationContext,
-                        "Error on matchs loading $it",
-                             Toast.LENGTH_LONG
-                    ).show()
-                    }
-                }
-        }
+
     }
 
 }

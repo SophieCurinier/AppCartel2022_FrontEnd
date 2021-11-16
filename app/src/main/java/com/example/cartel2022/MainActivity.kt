@@ -1,12 +1,14 @@
 package com.example.cartel2022
 
 import android.content.Intent
+import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatDelegate
 
 //Intent after pushing on one of sport buttons in sport activity
 const val EXTRA_SPORT = "com.example.Cartel2022.SPORT"
@@ -16,6 +18,7 @@ const val EXTRA_SCHOOL = "com.example.Cartel2022.SCHOOL"
 const val EXTRA_PLANNING = "com.example.Cartel2022.PLANNING"
 //Intent after clicking on one of menu button in menu option
 const val EXTRA_MENU = "com.example.Cartel2022.MENU"
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,13 +44,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ContactsActivity::class.java).apply {
                 putExtra(EXTRA_MENU, "Contact des responsables")})
         }
-        if (id == R.id.action_map) {
-            startActivity(Intent(this, MapsActivity::class.java).apply {
-                putExtra(EXTRA_MENU, "Plan")})
+        if (id == R.id.action_partner){
+            startActivity(Intent(this, PartnerActivity::class.java).apply {
+                putExtra(EXTRA_MENU, "Partenaire")})
         }
         if (id == R.id.action_setting){
             startActivity(Intent(this, SettingActivity::class.java).apply {
-                putExtra(EXTRA_MENU, "A propos de nous et paramètre")})
+                putExtra(EXTRA_MENU, "A propos de nous")})
         }
 
         return super.onOptionsItemSelected(item)
@@ -62,18 +65,9 @@ class MainActivity : AppCompatActivity() {
         }
         startActivity(intent)
     }
-    // Called when user clicks on Sport button //
-    fun switchRanking(view: View) {
-        val editText = findViewById<Button>(R.id.buttonWebSite)
-        val message = editText.text.toString()
-        val intent = Intent(this, RankingActivity::class.java).apply {
-            putExtra(EXTRA_MENU, message)
-        }
-        startActivity(intent)
-    }
     //Called when the user clicks on the Ranking button
     fun switchPlanning(view: View) {
-        val editText = findViewById<Button>(R.id.buttonInstagram)
+        val editText = findViewById<Button>(R.id.buttonPlanning)
         val message = editText.text.toString()
         val intent = Intent(this, PlanningActivity::class.java).apply {
             putExtra(EXTRA_PLANNING, message)
@@ -82,10 +76,20 @@ class MainActivity : AppCompatActivity() {
     }
     //Called when the user clicks on the School button
     fun switchSchool(view: View) {
-        val editText = findViewById<Button>(R.id.buttonFacebook)
+        val editText = findViewById<Button>(R.id.buttonSchool)
         val message = editText.text.toString()
         val intent = Intent(this, SchoolActivity::class.java).apply {
             putExtra(EXTRA_SCHOOL, message)
+        }
+        startActivity(intent)
+    }
+
+    //Called when the user clicks on the map button
+    fun switchMaps(view: View) {
+        val editText = findViewById<Button>(R.id.buttonSchool)
+        val message = editText.text.toString()
+        val intent = Intent(this, MapsActivity::class.java).apply {
+            putExtra(EXTRA_MENU, message)
         }
         startActivity(intent)
     }

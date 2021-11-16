@@ -7,11 +7,10 @@
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/kaki_500</item>
-        <item name="colorSecondaryVariant">@color/kaki_700</item>
+        <item name="colorSecondaryVariant">@color/kaki_500</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
     </style>
 
     <style name="Theme.Cartel2022.NoActionBar">
@@ -19,7 +18,9 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.Cartel2022.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.Cartel2022.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+
 
     <style name="Theme.Cartel2022.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
