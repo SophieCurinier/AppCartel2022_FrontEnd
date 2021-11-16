@@ -35,39 +35,48 @@
 
         <activity
             android:name=".PartnerActivity"
+            android:screenOrientation="portrait"
             android:exported="false"
             android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".AboutUsActivity"
+            android:screenOrientation="portrait"
             android:exported="false"
             android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MapsActivity"
+            android:screenOrientation="portrait"
             android:exported="false"
             android:label="@string/title_activity_maps"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".SocialNetworkActivity"
+            android:screenOrientation="portrait"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".SchoolActivity"
+            android:screenOrientation="portrait"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".SportActivity"
+            android:screenOrientation="portrait"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MatchActivity"
+            android:screenOrientation="portrait"
             android:exported="true"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".ContactActivity"
+            android:screenOrientation="portrait"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
