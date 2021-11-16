@@ -12,7 +12,7 @@ class ContactsAdapter(val listener: OnItemSelectedListener) : RecyclerView.Adapt
         val poste: TextView = view.findViewById(R.id.Poste1)
         val circonstance: TextView = view.findViewById(R.id.Circonstance1)
         val nom: TextView = view.findViewById(R.id.nom1)
-        val numero: TextView = view.findViewById(R.id.numero1)
+        val numero: TextView = view.findViewById(R.id.numero)
     }
 
     private val items = mutableListOf<ContactOrga>()
