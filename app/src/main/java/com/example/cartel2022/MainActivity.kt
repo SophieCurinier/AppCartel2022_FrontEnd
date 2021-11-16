@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
     fun switchPlanning(view: View) {
         val editText = findViewById<Button>(R.id.buttonPlanning)
         val message = editText.text.toString()
-        val intent = Intent(this, PlanningActivity::class.java).apply {
+        val intent = Intent(this, MatchActivity::class.java).apply {
             putExtra(EXTRA_PLANNING, message)
         }
         startActivity(intent)
