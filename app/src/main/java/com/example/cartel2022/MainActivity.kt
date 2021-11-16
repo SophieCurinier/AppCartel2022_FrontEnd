@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
     }
     //Called when the user clicks on the Ranking button
     fun switchPlanning(view: View) {
-        val editText = findViewById<Button>(R.id.buttonInstagram)
+        val editText = findViewById<Button>(R.id.buttonPlanning)
         val message = editText.text.toString()
         val intent = Intent(this, MatchActivity::class.java).apply {
             putExtra(EXTRA_MENU, message)
@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() {
     }
     //Called when the user clicks on the School button
     fun switchSchool(view: View) {
-        val editText = findViewById<Button>(R.id.buttonFacebook)
+        val editText = findViewById<Button>(R.id.buttonSchool)
         val message = editText.text.toString()
         val intent = Intent(this, SchoolActivity::class.java).apply {
             putExtra(EXTRA_SCHOOL, message)
@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity() {
 
     //Called when the user clicks on the map button
     fun switchMaps(view: View) {
-        val editText = findViewById<Button>(R.id.buttonWebSite)
+        val editText = findViewById<Button>(R.id.buttonMaps)
         val message = editText.text.toString()
         val intent = Intent(this, MapsActivity::class.java).apply {
             putExtra(EXTRA_MENU, message)

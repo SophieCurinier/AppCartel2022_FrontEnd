@@ -40,7 +40,7 @@ class ContactAdapter(val listener: OnItemSelectedListener) : RecyclerView.Adapte
             circonstance.text = contact.circonstance
             nom.text = contact.nom
             numero.text = contact.numero
-            itemView.setOnClickListener { listener.onItemSelected(contact.id, contact.numero) }
+            itemView.setOnClickListener { null }
 
         }
     }

@@ -47,18 +47,18 @@
         tools:ignore="MissingConstraints,Suspicious0dp" />
 
     <Button
-        android:id="@+id/buttonFacebook"
+        android:id="@+id/buttonSchool"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:onClick="switchSchool"
         android:text="@string/school"
-        app:layout_constraintBottom_toTopOf="@+id/buttonInstagram"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPlanning"
         app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@+id/homeLogoView" />
 
     <Button
-        android:id="@+id/buttonInstagram"
+        android:id="@+id/buttonPlanning"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:onClick="switchPlanning"
@@ -66,10 +66,10 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonSport"
         app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
-        app:layout_constraintTop_toBottomOf="@+id/buttonFacebook" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonSchool" />
 
     <Button
-        android:id="@+id/buttonWebSite"
+        android:id="@+id/buttonMaps"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:onClick="switchMaps"
@@ -85,9 +85,9 @@
         android:layout_height="wrap_content"
         android:onClick="switchSport"
         android:text="@string/sports"
-        app:layout_constraintBottom_toBottomOf="@id/buttonWebSite"
+        app:layout_constraintBottom_toBottomOf="@id/buttonMaps"
         app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
         app:layout_constraintStart_toStartOf="@+id/guidelineStart"
-        app:layout_constraintTop_toBottomOf="@+id/buttonInstagram" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonPlanning" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
