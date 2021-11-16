@@ -46,7 +46,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/guideline3"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline">
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        android:paddingBottom="4dp">
 
         <TextView
             android:id="@+id/Poste1"
@@ -74,6 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_below="@+id/Circonstance1"
+            android:layout_alignParentLeft="true"
             android:text="Pierre MAINDRON"
             android:textColor="@color/black"
             android:textSize="17sp"
@@ -86,7 +88,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/Circonstance1"
             android:layout_alignParentRight="true"
-            android:text="06 87 77 40 44"/>
+            android:text="06 87 77 40 44"
+            android:textSize="12sp"/>
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
