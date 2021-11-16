@@ -7,11 +7,11 @@ import android.os.Bundle
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.cartel2022.R
+import com.example.cartel2022.model.PartnerAdapter
 import com.example.cartel2022.model.PartnerService
 
 class PartnerActivity : AppCompatActivity(), OnUrlSelectedListener {
-    val partnerService = PartnerService()
+    private val partnerService = PartnerService()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,7 +19,7 @@ class PartnerActivity : AppCompatActivity(), OnUrlSelectedListener {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         title = intent.getStringExtra(EXTRA_MENU)
 
-        val recyclerView = findViewById<RecyclerView>(R.id.listPartner) // (2)
+        val recyclerView = findViewById<RecyclerView>(R.id.partner_recyclerview) // (2)
         val adapter = PartnerAdapter(this) // (3)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -31,7 +31,7 @@ class PartnerActivity : AppCompatActivity(), OnUrlSelectedListener {
     }
 
     override fun onUrlSelected(url: String) {
-        val openURL = Intent(android.content.Intent.ACTION_VIEW)
+        val openURL = Intent(Intent.ACTION_VIEW)
         openURL.data = Uri.parse(url)
         startActivity(openURL)
     }

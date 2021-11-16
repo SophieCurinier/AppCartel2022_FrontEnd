@@ -7,7 +7,4 @@ import retrofit2.http.Path
 interface SchoolApiService {
     @GET("ecole")
     fun findAll(): Call<List<SchoolDto>>
-
-    @GET("ecole/{id}")
-    fun findById(@Path("id") id: Long): Call<SchoolDto>
 }

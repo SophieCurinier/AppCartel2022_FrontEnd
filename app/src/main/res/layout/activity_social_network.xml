@@ -7,28 +7,28 @@
     tools:context=".SocialNetworkActivity">
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
+        android:id="@+id/guidelineStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.05" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
+        android:id="@+id/guidelineEnd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.95" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
+        android:id="@+id/guidelineTop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.05" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
+        android:id="@+id/guidelineBottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -41,47 +41,47 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintDimensionRatio="h,1:1"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/guideline"
-        app:layout_constraintTop_toTopOf="@id/guideline3"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toTopOf="@id/guidelineTop"
         app:srcCompat="@drawable/ic_logo"
         tools:ignore="MissingConstraints,Suspicious0dp" />
 
     <Button
-        android:id="@+id/buttonSchool"
+        android:id="@+id/buttonFacebook"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:onClick="switchFacebook"
         android:text="@string/facebook"
         android:backgroundTint="#3b5998"
-        app:layout_constraintBottom_toTopOf="@+id/buttonPlanning"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintBottom_toTopOf="@+id/buttonInstagram"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@+id/homeLogoView" />
 
     <Button
-        android:id="@+id/buttonPlanning"
+        android:id="@+id/buttonInstagram"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:onClick="switchInstagram"
         android:text="@string/instagram"
         android:backgroundTint="#C13584"
-        app:layout_constraintBottom_toTopOf="@+id/buttonMap"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSchool" />
+        app:layout_constraintBottom_toTopOf="@+id/buttonWebSite"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFacebook" />
 
     <Button
-        android:id="@+id/buttonMap"
+        android:id="@+id/buttonWebSite"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:onClick="switchWebSite"
         android:text="@string/web_site"
         android:backgroundTint="#3A393E"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/buttonPlanning" />
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/buttonInstagram" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

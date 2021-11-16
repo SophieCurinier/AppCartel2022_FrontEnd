@@ -1,17 +1,22 @@
 package com.example.cartel2022
 
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import androidx.core.app.ActivityCompat
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.example.cartel2022.model.ContactAdapter
+import com.example.cartel2022.model.ContactService
 import kotlinx.android.synthetic.main.activity_contacts.*
 
-class ContactsActivity : AppCompatActivity(), OnItemSelectedListener {
+class ContactActivity : AppCompatActivity(), OnItemSelectedListener {
 
-    private val adapter = ContactsAdapter(this)
+    private val adapter = ContactAdapter(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,12 +31,17 @@ class ContactsActivity : AppCompatActivity(), OnItemSelectedListener {
         contacts_recyclerview.setHasFixedSize(true)
         contacts_recyclerview.adapter = adapter
 
-        adapter.update(ContactsService.findAll())
+        adapter.update(ContactService.findAll())
     }
 
     override fun onItemSelected(id: Long, tel: String) {
-        val intent = Intent(Intent.ACTION_DIAL)
-        intent.setData(Uri.parse(tel));
+        val intent = Intent(Intent.ACTION_CALL)
+        intent.setData(Uri.parse("tel:0377778888"))
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+            Toast.makeText(this,"bite",Toast.LENGTH_LONG)
+            return;
+        }
+        Toast.makeText(this,"suce",Toast.LENGTH_LONG)
         startActivity(intent)
     }
 }

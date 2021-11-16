@@ -1,11 +1,12 @@
-package com.example.cartel2022
+package com.example.cartel2022.model
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.cartel2022.model.SportDto
+import com.example.cartel2022.OnItemSelectedListener
+import com.example.cartel2022.R
 
 class SportAdapter(val listener: OnItemSelectedListener) : RecyclerView.Adapter<SportAdapter.SportViewHolder>() {
 
@@ -24,7 +25,8 @@ class SportAdapter(val listener: OnItemSelectedListener) : RecyclerView.Adapter<
     override fun getItemCount() = items.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SportViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.sport_item,
+        val itemView = LayoutInflater.from(parent.context).inflate(
+            R.layout.sport_item,
             parent, false)
 
         return SportViewHolder(itemView)

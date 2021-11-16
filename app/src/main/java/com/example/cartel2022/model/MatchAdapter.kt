@@ -1,4 +1,4 @@
-package com.example.cartel2022
+package com.example.cartel2022.model
 
 
 import android.view.LayoutInflater
@@ -6,8 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.cartel2022.model.MatchDto
-import com.example.cartel2022.model.SportDto
+import com.example.cartel2022.R
 import kotlinx.android.synthetic.main.match_item.view.*
 
 class MatchAdapter :
@@ -33,7 +32,8 @@ class MatchAdapter :
     override fun getItemCount() = items.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MatchViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.match_item,
+        val itemView = LayoutInflater.from(parent.context).inflate(
+            R.layout.match_item,
             parent, false)
 
         return MatchViewHolder(itemView)
@@ -49,7 +49,7 @@ class MatchAdapter :
             if (currentItem.score_1 ==  null){
                 textViewScore.text = " - "
             }
-            else {textViewScore.text = currentItem.score_1.toString() + " - " + currentItem.score_2.toString()}
+            else {textViewScore.text = (currentItem.score_1.toString() + " - " + currentItem.score_2.toString())}
 
         }
     }

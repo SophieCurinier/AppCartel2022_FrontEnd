@@ -8,13 +8,9 @@ interface MatchApiService {
     @GET("match")
     fun findAll(): Call<List<MatchDto>>
 
-    @GET("match/{id}")
-    fun findById(@Path("id") id: Long): Call<MatchDto>
-
     @GET("match/sport/{sport}")
     fun findBySport(@Path("sport") sport: String): Call<List<MatchDto>>
 
     @GET("match/ecole/{school}")
     fun findBySchool(@Path("school") school: String): Call<List<MatchDto>>
-
 }

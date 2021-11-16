@@ -1,11 +1,12 @@
-package com.example.cartel2022
+package com.example.cartel2022.model
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.cartel2022.model.SchoolDto
+import com.example.cartel2022.OnItemSelectedListener
+import com.example.cartel2022.R
 
 class SchoolAdapter(
     private val listener: OnItemSelectedListener

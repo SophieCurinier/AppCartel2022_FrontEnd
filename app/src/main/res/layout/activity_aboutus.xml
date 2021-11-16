@@ -4,31 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SettingActivity">
+    tools:context=".AboutUsActivity">
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
+        android:id="@+id/guidelineStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.05" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
+        android:id="@+id/guidelineEnd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.95" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
+        android:id="@+id/guidelineTop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.05" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
+        android:id="@+id/guidelineBottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -38,29 +38,26 @@
         android:id="@+id/aboutUs"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="A propos de nous"
+        android:text="@string/aboutUs"
         android:textColor="@color/grey"
         android:gravity="center|center_vertical"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@id/guideline"
-        app:layout_constraintTop_toTopOf="@id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toTopOf="@id/guidelineTop"
         tools:layout_editor_absoluteY="33dp" />
 
     <TextView
-        android:id="@+id/multiAutoCompleteTextView"
+        android:id="@+id/aboutUs_textview"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@id/aboutUs"
         android:layout_marginTop="20dp"
         android:gravity="center|center_vertical"
         android:textColor="@color/grey"
         android:textSize="18sp"
         android:text="Le CARTEL est un évènement sportif et festif entres les écoles des Mines et de l'IMT. Il se déroule sur 4 jours et regroupe près de 2000 étudiants. En constante évolution, il dispose désormais de sa propre application vous permettant de suivre son déroulé, des compétitions jusqu'à la soirée!" />
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
