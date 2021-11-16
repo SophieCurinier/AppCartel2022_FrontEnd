@@ -13,5 +13,4 @@ interface MatchApiService {
 
     @GET("match/ecole/{school}")
     fun findBySchool(@Path("school") school: String): Call<List<MatchDto>>
-
 }
