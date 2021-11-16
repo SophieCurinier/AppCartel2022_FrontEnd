@@ -67,27 +67,32 @@
             android:gravity="center"
             android:text="Hébergement, Transports, Restauration"
             android:textColor="@color/black"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:paddingBottom="10dp"/>
 
         <TextView
             android:id="@+id/nom1"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_below="@+id/Circonstance1"
+            android:gravity="center"
             android:text="Pierre MAINDRON"
             android:textColor="@color/black"
             android:textSize="17sp"
-            android:textStyle="bold"
-            android:paddingTop="10dp"/>
+            android:textStyle="bold" />
 
-        <Button
+        <TextView
             android:id="@+id/numero1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:layout_below="@+id/Circonstance1"
             android:layout_alignParentRight="true"
+            android:paddingHorizontal="4dp"
+            android:gravity="center"
+            android:background="@color/kaki_500"
+            android:textColor="@color/white"
             android:text="06 87 77 40 44"
-            android:textSize="12sp"/>
+            android:textSize="17sp"/>
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
