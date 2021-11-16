@@ -49,8 +49,8 @@ class SchoolActivity : AppCompatActivity(),OnItemSelectedListener {
 
 
     //When user clicks on a school button
-    override fun onItemSelected(id: Long) {
-        val intent = Intent(this, MatchActivity::class.java).putExtra(EXTRA_SCHOOL, id)
+    override fun onItemSelected(id: Long, name: String) {
+        val intent = Intent(this, MatchActivity::class.java).putExtra(EXTRA_SCHOOL, name)
         startActivity(intent)
     }
 

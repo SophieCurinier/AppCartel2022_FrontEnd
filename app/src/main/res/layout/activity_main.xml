@@ -49,37 +49,37 @@
         tools:ignore="MissingConstraints,Suspicious0dp" />
 
     <Button
-        android:id="@+id/buttonFacebook"
+        android:id="@+id/buttonSchool"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:onClick="switchSchool"
         android:text="@string/school"
-        app:layout_constraintBottom_toTopOf="@+id/buttonInstagram"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPlanning"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/homeLogoView" />
 
     <Button
-        android:id="@+id/buttonInstagram"
+        android:id="@+id/buttonPlanning"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:onClick="switchPlanning"
         android:text="@string/planning"
-        app:layout_constraintBottom_toTopOf="@+id/buttonWebSite"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/buttonFacebook" />
-
-    <Button
-        android:id="@+id/buttonWebSite"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:onClick="switchRanking"
-        android:text="@string/ranking"
         app:layout_constraintBottom_toTopOf="@+id/buttonSport"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/buttonInstagram" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonSchool" />
+
+    <Button
+        android:id="@+id/buttonMap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="switchMaps"
+        android:text="@string/map"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSport" />
 
     <Button
         android:id="@+id/buttonSport"
@@ -87,10 +87,10 @@
         android:layout_height="wrap_content"
         android:onClick="switchSport"
         android:text="@string/sports"
-        app:layout_constraintBottom_toBottomOf="@id/guideline4"
+        app:layout_constraintBottom_toBottomOf="@id/buttonMap"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/buttonWebSite" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonPlanning" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

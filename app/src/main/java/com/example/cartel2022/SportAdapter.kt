@@ -34,7 +34,7 @@ class SportAdapter(val listener: OnItemSelectedListener) : RecyclerView.Adapter<
         val currentItem = items[position]
         holder.apply {
             name.text = currentItem.name
-            itemView.setOnClickListener { listener.onItemSelected(currentItem.id) }
+            itemView.setOnClickListener { listener.onItemSelected(currentItem.id, currentItem.name) }
         }
     }
 

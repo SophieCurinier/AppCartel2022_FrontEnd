@@ -16,6 +16,7 @@ class MatchAdapter :
     inner class MatchViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         //All view of the list item
         val textViewMatch: TextView = itemView.match_itemTextView
+        val textViewDate: TextView = itemView.match_itemTextViewDate
         val textViewTeam1: TextView = itemView.match_itemTextViewTeam1
         val textViewTeam2: TextView = itemView.match_itemTextViewTeam2
         val textViewScore: TextView = itemView.match_itemTextViewScore
@@ -41,10 +42,14 @@ class MatchAdapter :
     override fun onBindViewHolder(holder: MatchViewHolder, position: Int) {
         val currentItem = items[position]
         holder.apply {
-            textViewMatch.text = currentItem.sport.toString() + " - " + currentItem.date.toString()
-            textViewTeam1.text = currentItem.team1.toString()
-            textViewTeam2.text = currentItem.team2.toString()
-            textViewScore.text = currentItem.score1.toString() + " - " + currentItem.score2.toString()
+            textViewMatch.text = currentItem.sport
+            textViewDate.text = currentItem.date
+            textViewTeam1.text = currentItem.team1
+            textViewTeam2.text = currentItem.team2
+            if (currentItem.score_1 ==  null){
+                textViewScore.text = " - "
+            }
+            else {textViewScore.text = currentItem.score_1.toString() + " - " + currentItem.score_2.toString()}
 
         }
     }

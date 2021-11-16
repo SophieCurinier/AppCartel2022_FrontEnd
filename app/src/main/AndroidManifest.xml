@@ -33,7 +33,7 @@
             android:value="AIzaSyBxyx1K1FDkXfx7CsIT_yDsAoygbR9Ggvo" />
 
         <activity
-            android:name=".model.PartnerActivity"
+            android:name=".PartnerActivity"
             android:exported="false" />
         <activity
             android:name=".SettingActivity"
@@ -49,10 +49,6 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".SchoolActivity"
-            android:exported="false"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".RankingActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         <activity

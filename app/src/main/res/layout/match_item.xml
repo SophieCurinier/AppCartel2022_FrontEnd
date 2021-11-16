@@ -14,7 +14,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="90dp"
         android:background="@color/grey"
         android:padding="8dp">
 
@@ -28,10 +28,19 @@
             android:textSize="20sp" />
 
         <TextView
+            android:id="@+id/match_itemTextViewDate"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:text="date"
+            android:textColor="@color/white"
+            android:layout_below="@+id/match_itemTextView"/>
+
+        <TextView
             android:id="@+id/match_itemTextViewTeam1"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
-            android:layout_below="@+id/match_itemTextView"
+            android:layout_below="@+id/match_itemTextViewDate"
             android:layout_alignParentBottom="true"
             android:gravity="center"
             android:text="Team1"
@@ -41,7 +50,7 @@
             android:id="@+id/match_itemTextViewTeam2"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
-            android:layout_below="@+id/match_itemTextView"
+            android:layout_below="@+id/match_itemTextViewDate"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:layout_centerHorizontal="true"
@@ -52,7 +61,7 @@
             android:id="@+id/match_itemTextViewScore"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
-            android:layout_below="@+id/match_itemTextView"
+            android:layout_below="@+id/match_itemTextViewDate"
             android:layout_toRightOf="@id/match_itemTextViewTeam1"
             android:layout_toLeftOf="@id/match_itemTextViewTeam2"
             android:layout_alignParentBottom="true"

@@ -5,11 +5,11 @@
             android:id="@+id/action_social_network"
             android:title="@string/social_network"/>
         <item
-            android:id="@+id/action_map"
-            android:title="@string/map"/>
-        <item
             android:id="@+id/action_urgency_contact"
             android:title="@string/urgency_contact"/>
+        <item
+            android:id="@+id/action_partner"
+            android:title="@string/partner"/>
         <item
             android:id="@+id/action_setting"
             android:title="@string/setting"/>
